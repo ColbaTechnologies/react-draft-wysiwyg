@@ -25,9 +25,9 @@ import subscript from '../../images/subscript.svg';
 import superscript from '../../images/superscript.svg';
 
 /**
-* This is default toolbar configuration,
-* whatever user passes in toolbar property is deeply merged with this to over-ride defaults.
-*/
+ * This is default toolbar configuration,
+ * whatever user passes in toolbar property is deeply merged with this to over-ride defaults.
+ */
 export default {
   options: ['inline', 'blockType', 'fontSize', 'fontFamily', 'list', 'textAlign', 'colorPicker', 'link', 'embedded', 'emoji', 'image', 'remove', 'history'],
   inline: {
@@ -36,13 +36,27 @@ export default {
     component: undefined,
     dropdownClassName: undefined,
     options: ['bold', 'italic', 'underline', 'strikethrough', 'monospace', 'superscript', 'subscript'],
-    bold: { icon: bold, className: undefined, title: undefined },
-    italic: { icon: italic, className: undefined, title: undefined },
-    underline: { icon: underline, className: undefined, title: undefined },
-    strikethrough: { icon: strikethrough, className: undefined, title: undefined },
-    monospace: { icon: monospace, className: undefined, title: undefined },
-    superscript: { icon: superscript, className: undefined, title: undefined },
-    subscript: { icon: subscript, className: undefined, title: undefined },
+    bold: {
+      icon: bold, className: undefined, title: undefined, type: undefined,
+    },
+    italic: {
+      icon: italic, className: undefined, title: undefined, type: undefined,
+    },
+    underline: {
+      icon: underline, className: undefined, title: undefined, type: undefined,
+    },
+    strikethrough: {
+      icon: strikethrough, className: undefined, title: undefined, type: undefined,
+    },
+    monospace: {
+      icon: monospace, className: undefined, title: undefined, type: undefined,
+    },
+    superscript: {
+      icon: superscript, className: undefined, title: undefined, type: undefined,
+    },
+    subscript: {
+      icon: subscript, className: undefined, title: undefined, type: undefined,
+    },
   },
   blockType: {
     inDropdown: true,
@@ -85,10 +99,18 @@ export default {
     component: undefined,
     dropdownClassName: undefined,
     options: ['left', 'center', 'right', 'justify'],
-    left: { icon: left, className: undefined, title: undefined },
-    center: { icon: center, className: undefined, title: undefined },
-    right: { icon: right, className: undefined, title: undefined },
-    justify: { icon: justify, className: undefined, title: undefined },
+    left: {
+      icon: left, className: undefined, title: undefined, type: undefined,
+    },
+    center: {
+      icon: center, className: undefined, title: undefined, type: undefined,
+    },
+    right: {
+      icon: right, className: undefined, title: undefined, type: undefined,
+    },
+    justify: {
+      icon: justify, className: undefined, title: undefined, type: undefined,
+    },
     title: undefined,
   },
   colorPicker: {
@@ -103,6 +125,7 @@ export default {
       'rgb(239,239,239)', 'rgb(255,255,255)', 'rgb(250,197,28)', 'rgb(243,121,52)', 'rgb(209,72,65)',
       'rgb(184,49,47)', 'rgb(124,112,107)', 'rgb(209,213,216)'],
     title: undefined,
+    type: undefined,
   },
   link: {
     inDropdown: false,
@@ -163,7 +186,9 @@ export default {
     },
     title: undefined,
   },
-  remove: { icon: eraser, className: undefined, component: undefined, title: undefined },
+  remove: {
+    icon: eraser, className: undefined, component: undefined, title: undefined, type: undefined,
+  },
   history: {
     inDropdown: false,
     className: undefined,

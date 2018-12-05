@@ -1,15 +1,14 @@
 {
-  "name": "react-draft-wysiwyg",
-  "version": "1.12.13",
-  "description": "A wysiwyg on top of DraftJS.",
+  "name": "colba-react-draft-wysiwyg",
+  "version": "1.0.1",
+  "description": "Fork from A wysiwyg on top of DraftJS.",
   "main": "dist/react-draft-wysiwyg.js",
   "repository": {
     "type": "git",
-    "url": "https://github.com/jpuri/react-draft-wysiwyg.git"
+    "url": "https://github.com/ColbaTechnologies/react-draft-wysiwyg"
   },
-  "author": "Jyoti Puri",
+  "author": "Colba Technologies",
   "devDependencies": {
-    "@storybook/react": "^3.2.17",
     "autoprefixer": "^8.0.0",
     "babel-core": "^6.26.0",
     "babel-eslint": "^8.0.3",
@@ -71,11 +70,8 @@
     "build": "npm run clean && npm run build:webpack",
     "test": "cross-env BABEL_ENV=test mocha --compilers js:config/test-compiler.js config/test-setup.js src/**/*Test.js",
     "lint": "eslint src",
-    "lintdocs": "eslint docs/src",
     "flow": "flow; test $? -eq 0 -o $? -eq 2",
-    "check": "npm run lint && npm run flow",
-    "storybook": "start-storybook -p 6006",
-    "build-storybook": "build-storybook"
+    "check": "npm run lint && npm run flow"
   },
   "license": "MIT"
 }
